@@ -17,27 +17,55 @@ git commit -m "added software and account requirement"
 git push origin main ## connecting local system to github 
 ```
 
-```
+
 creating conda environment
-```
+
 ```
 conda create -p venv python==3.7 -y
 ```
 ```
 -p # virtual environment directory in project folder
 ```
+activate  environment
 ```
-conda activate mlproject/ ## activate  environment
+conda activate mlproject/ 
 ```
+install requirements.txt
 ```
-pip install -r requirements.txt ## install requirements.txt
+pip install -r requirements.txt
 ```
-```
-git add filename # it will add file to github  according to version control system
+it will add file to github  according to version control system
 
-git add . ### it will add all file to github
-
+```
+git add filename 
+```
+it will add all file to github
+```
+git add . 
+```
 gitignore will remove some files which you don't want  we have to mention them in that
-
-git status ## it will summary of files which are in github 
+```
+git status 
 ``` 
+creating and saving the version
+```
+git commit 
+```
+to see all version previous or latest
+```
+git log 
+```
+
+to send version /changes to github
+```
+git push origin main
+```
+
+to check remote url
+
+```
+git remote -v
+```
+
+
+
