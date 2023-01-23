@@ -98,6 +98,13 @@ docker ps
  docker stop <container_id>
  ```
   
+```
+main.yml file helps to do continuous Integration/Development in the system
+```
+```
+python setup.py install
+```
+
 
 
 
