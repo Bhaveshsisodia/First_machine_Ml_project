@@ -27,7 +27,7 @@ def get_requirements_list()->List[str]:
         requirement_file.readlines()
 
 setup(
-    name=PROJECT_NAME,
+    name=PROJECT_NAME, 
     version=VERSION,
     author =AUTHOR,
     description= DESCRIPTION,
