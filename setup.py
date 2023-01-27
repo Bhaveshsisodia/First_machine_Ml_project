@@ -1,4 +1,6 @@
-from setuptools import setup
+### setup.py is important file for installing packages for housing folder
+
+from setuptools import setup,find_packages
 from typing import List
 
 
@@ -11,7 +13,7 @@ PROJECT_NAME="Housing_predictor"
 VERSION = "0.0.1"
 AUTHOR = 'Bhavesh'
 DESCRIPTION = "This is my first machine learning end to end project"
-PACKAGES= ["housing"]
+PACKAGES= find_packages()
 REQUIREMENT_FILE_NAME= "requirements.txt"
 
 
@@ -24,7 +26,9 @@ def get_requirements_list()->List[str]:
     
     """
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
-        requirement_file.readlines()
+        return requirement_file.readlines().remove('-e .\n')
+
+
 
 setup(
     name=PROJECT_NAME, 
