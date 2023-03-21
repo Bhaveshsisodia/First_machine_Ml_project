@@ -18,7 +18,7 @@ DataTranformationConfig = namedtuple("DataTranformationConfig",["add_bedroom_per
 #### add_bedroom_per_room is calculated column, transformed_train_dir is directory of test and train data stored, file path of 
 #### preprocessed data
 
-ModelTrainerConfig = namedtuple("ModelTrainingConfig",["trained_model_file_path","base_accuracy"])
+ModelTrainerConfig = namedtuple("ModelTrainerConfig",["trained_model_file_path","base_accuracy"])
 
 ##### pickel file od model saved at trained_model_file_path and base accuracy to surpass by the model
 
@@ -31,3 +31,5 @@ ModelPusherConfig = namedtuple("ModelPusherConfig",["export_model_path"])
 
 ##### if the new model perform better than all the models in production then we need to save and export  that model
 ##### as a pickle file
+
+TraningPipelineConfig = namedtuple("TraningPipelineConfig",["artifact_dir"])
