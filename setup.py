@@ -1,5 +1,4 @@
 ### setup.py is important file for installing packages for housing folder
-
 from setuptools import setup,find_packages
 from typing import List
 
@@ -23,7 +22,7 @@ def get_requirements_list()->List[str]:
 
     return this function is going to return a list which
     contain name of libraries mentioned in requirements.txt file
-    
+
     """
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
         return requirement_file.readlines().remove('-e .\n')
@@ -31,11 +30,10 @@ def get_requirements_list()->List[str]:
 
 
 setup(
-    name=PROJECT_NAME, 
+    name=PROJECT_NAME,
     version=VERSION,
     author =AUTHOR,
     description= DESCRIPTION,
     packages=PACKAGES,
     install_requires=get_requirements_list()
 )
-
