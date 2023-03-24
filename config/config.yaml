@@ -1,6 +1,10 @@
 training_pipeline_config:
   pipeline_name: housing
+<<<<<<< HEAD
   artifact_dir: artifact # output every component stores here in the dir
+=======
+  artifact_dir: artifact  ### output of every component storing directory
+>>>>>>> ee80b54e30ac36b325799faea349fc0bb2371339
 
 data_ingestion_config:
   dataset_download_url: https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz
