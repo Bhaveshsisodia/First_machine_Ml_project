@@ -1,10 +1,7 @@
 training_pipeline_config:
   pipeline_name: housing
-<<<<<<< HEAD
   artifact_dir: artifact # output every component stores here in the dir
-=======
   artifact_dir: artifact  ### output of every component storing directory
->>>>>>> ee80b54e30ac36b325799faea349fc0bb2371339
 
 data_ingestion_config:
   dataset_download_url: https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz
@@ -12,7 +9,7 @@ data_ingestion_config:
   tgz_download_dir: tgz_data
   ingested_dir: ingested_data
   ingested_train_dir: train
-  ingested_test_dir: test 
+  ingested_test_dir: test
 
 
 
@@ -30,7 +27,7 @@ data_transformation_config:
   transformed_test_dir: test
   preprocessing_dir: preprocessed
   preprocessed_object_file_name: preprocessed.pkl
-  
+
 model_trainer_config:
   trained_model_dir: trained_model
   model_file_name: model.pkl
@@ -41,7 +38,7 @@ model_trainer_config:
 
 model_evaluation_config:
   model_evaluation_file_name: model_evaluation.yaml
-  
+
 
 model_pusher_config:
   model_export_dir: saved_models
