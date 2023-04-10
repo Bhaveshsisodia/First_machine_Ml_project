@@ -74,7 +74,7 @@ class Configuration:
             report_page_file_path = os.path.join(
                 data_validation_artifact_dir, data_validation_config[DATA_VALIDATION_REPORT_PAGE_FILE_NAME_KEY])
 
-            
+
             data_validation_config = DataValidationConfig(
                 schema_file_path=schema_file_path,
                 report_file_path=report_file_path,
@@ -112,3 +112,4 @@ class Configuration:
 
         except Exception as e:
             raise HousingException(e, sys) from e
+
