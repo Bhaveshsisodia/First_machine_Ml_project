@@ -18,6 +18,7 @@ class DataValidation:
 
     def __init__(self, data_validation_config: DataValidationConfig, data_ingestion_artifact: DataIngestionArtifact):
         try:
+            logging.info(f"{'='*20} Data Validation log Started.{'='*20} \n\n")
             self.data_validation_config = data_validation_config
             self.data_ingestion_artifact = data_ingestion_artifact
 
@@ -40,7 +41,7 @@ class DataValidation:
             is_test_file_exists = False
             train_file_path = self.data_ingestion_artifact.train_file_path
             test_file_path = self.data_ingestion_artifact.test_file_path
-            print(train_file_path,test_file_path)
+            # print(train_file_path,test_file_path)
 
             is_train_file_exists = os.path.exists(train_file_path)
             is_test_file_exists = os.path.exists(test_file_path)
@@ -64,7 +65,7 @@ class DataValidation:
             validation_status = False
 
             train_df, test_df = self.get_train_and_test_dataframe()
-            print(self.data_validation_config.schema_file_path)
+            # print(self.data_validation_config.schema_file_path)
             schema_file_read = read_yaml_file(
                 file_path=self.data_validation_config.schema_file_path)
             col=schema_file_read['columns']
@@ -166,5 +167,11 @@ class DataValidation:
             logging.info(
                 f"Data Validation artifact:[{data_validation_artifact}]")
 
+            return data_validation_artifact
+
         except Exception as e:
             raise HousingException(e, sys) from e
+
+
+    def __del__(self):
+        logging.info(f"{'='*20} Data Validation log completed.{'='*20} \n\n")

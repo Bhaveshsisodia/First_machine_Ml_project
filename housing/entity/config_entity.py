@@ -13,7 +13,8 @@ DataValidationConfig = namedtuple("DataValidationConfig", [
 
 
 DataTransformationConfig = namedtuple("DataTranformationConfig", ["add_bedroom_per_room",
-                                                                  "transformed_train_dir", "transformed_test_dir", "preprocessed_object_file_path"])
+                                                                  "transformed_train_dir", "transformed_test_dir",
+                                                                    "preprocessed_object_file_path"])
 
 # add_bedroom_per_room is calculated column, transformed_train_dir is directory of test and train data stored, file path of
 # preprocessed data
