@@ -1,4 +1,5 @@
 from housing.pipeline.pipeline import Pipeline
+import os
 from housing.logger import logging
 from housing.exception import HousingException
 from housing.config.configuration import Configuration
@@ -7,8 +8,10 @@ from housing.component.data_transformation import DataTransformation
 
 def main():
     try:
-        pipeline = Pipeline()
-        pipeline.run_pipeline()
+        config_path = os.path.join("config","config.yaml")
+        pipeline = Pipeline(Configuration(config_file_path=config_path))
+        pipeline.start()
+        logging.info("Main Function Execution completed")
         # schema_file_path = r"C:\Users\dell\First_machine_Ml_project\config\schema.yaml"
         # file_path = r"C:\Users\dell\First_machine_Ml_project\housing\artifact\data_ingestion\2023-04-11-01-34-35\ingested_data\train\housing.csv"
 
