@@ -187,7 +187,7 @@ class DataTransformation:
             save_numpy_array_data(
                 file_path=transformed_test_file_path, array=test_arr)
 
-            preprocessing_obj_file_path = self.data_transformation_config.pre processed_object_file_path
+            preprocessing_obj_file_path = self.data_transformation_config.preprocessed_object_file_path
             logging.info(f"Saving Preprocessing Object.")
 
             save_object(file_path=preprocessing_obj_file_path,
